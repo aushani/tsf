@@ -373,27 +373,27 @@ FlowViewerWindow::FlowViewerWindow(osg::ArgumentParser& args,
 
 
     QCheckBox *cb_im_vel = new QCheckBox("Image Velodyne");
-    cb_im_vel->setChecked(true);
+    cb_im_vel->setChecked(false);
     _panel_layout->addWidget(cb_im_vel);
     connect(cb_im_vel, SIGNAL(clicked(bool)), this, SLOT(slot_cb_image_vel(bool)));
 
     QCheckBox *cb_im_dm = new QCheckBox("Image Depth Map");
-    cb_im_dm->setChecked(true);
+    cb_im_dm->setChecked(false);
     _panel_layout->addWidget(cb_im_dm);
     connect(cb_im_dm, SIGNAL(clicked(bool)), this, SLOT(slot_cb_image_depth_map(bool)));
 
     QCheckBox *cb_im_flow = new QCheckBox("Image Flow");
-    cb_im_flow->setChecked(true);
+    cb_im_flow->setChecked(false);
     _panel_layout->addWidget(cb_im_flow);
     connect(cb_im_flow, SIGNAL(clicked(bool)), this, SLOT(slot_cb_image_flow(bool)));
 
     QCheckBox *cb_im_roi = new QCheckBox("Image ROI");
-    cb_im_roi->setChecked(true);
+    cb_im_roi->setChecked(false);
     _panel_layout->addWidget(cb_im_roi);
     connect(cb_im_roi, SIGNAL(clicked(bool)), this, SLOT(slot_cb_image_roi(bool)));
 
     QCheckBox *cb_im_roi_dm = new QCheckBox("Image ROI Depth Mask");
-    cb_im_roi_dm->setChecked(true);
+    cb_im_roi_dm->setChecked(false);
     _panel_layout->addWidget(cb_im_roi_dm);
     connect(cb_im_roi_dm, SIGNAL(clicked(bool)), this, SLOT(slot_cb_image_roi_depth_mask(bool)));
 
