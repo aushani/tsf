@@ -14,7 +14,7 @@ cc_binary(
     visibility = ["//visibility:public"],
     deps = [
             "//thirdparty/ann",
-            "//thirdparty/gicp:gicpts",
+            "//thirdparty/gicpts:gicpts",
             "@boost//:boost_programoptions",
            ]
 )
@@ -25,7 +25,7 @@ cc_binary(
     visibility = ["//visibility:public"],
     deps = [
             "//thirdparty/ann",
-            "//thirdparty/gicp:gicpts",
+            "//thirdparty/gicpts:gicpts",
             "@boost//:boost_programoptions",
            ]
 )

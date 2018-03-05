@@ -1,25 +1,25 @@
 #new_local_repository(
-#    name = "eigen",
-#    path = "/usr/include/eigen3",
-#    build_file = "tools/eigen.BUILD"
+#    name = "cuda",
+#    build_file = "tools/cuda.BUILD",
+#    path = "/usr/local/cuda/"
+#)
+
+#new_local_repository(
+#    name = "openscenegraph",
+#    build_file = "tools/openscenegraph.BUILD",
+#    path = "/usr/local/"
+#)
+
+#new_local_repository(
+#    name = "qt4",
+#    path = "/usr/include/qt4",
+#    build_file = "tools/qt4.BUILD"
 #)
 
 new_local_repository(
-    name = "cuda",
-    build_file = "tools/cuda.BUILD",
-    path = "/usr/local/cuda/"
-)
-
-new_local_repository(
-    name = "openscenegraph",
-    build_file = "tools/openscenegraph.BUILD",
-    path = "/usr/local/"
-)
-
-new_local_repository(
-    name = "qt4",
-    path = "/usr/include/qt4",
-    build_file = "tools/qt4.BUILD"
+    name = "glib2",
+    path = "/usr/",
+    build_file = "tools/glib2.BUILD"
 )
 
 new_http_archive(
@@ -47,20 +47,20 @@ new_http_archive(
 #    build_file = "tools/eigen.BUILD"
 #)
 
-new_local_repository(
-    name = "ceres",
-    path = "/usr/local/",
-    build_file = "tools/ceres.BUILD",
-)
+#new_local_repository(
+#    name = "ceres",
+#    path = "/usr/local/",
+#    build_file = "tools/ceres.BUILD",
+#)
 
-new_local_repository(
-    name = "glog",
-    path = "/usr/local/",
-    build_file = "tools/glog.BUILD",
-)
+#new_local_repository(
+#    name = "glog",
+#    path = "/usr/local/",
+#    build_file = "tools/glog.BUILD",
+#)
 
-new_local_repository(
-    name = "suitesparse",
-    path = "/usr/",
-    build_file = "tools/suitesparse.BUILD",
-)
+#new_local_repository(
+#    name = "suitesparse",
+#    path = "/usr/",
+#    build_file = "tools/suitesparse.BUILD",
+#)
