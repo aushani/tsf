@@ -37,8 +37,7 @@ new_http_archive(
     sha256 = "dd254beb0bafc695d0f62ae1a222ff85b52dbaa3a16f76e781dce22d0d20a4a6",
     #sha256 = "fb8eae600b008bcd2297c710d21248b5dc44868224ccd5bd9677a8d770ba19f4",
     type = "tar.bz2",
-    url = "https://robots.engin.umich.edu/~aushani/eigen-eigen-5a0156e40feb.tar.bz2",
-    #url = "https://robots.engin.umich.edu/~aushani/eigen-eigen-aushani.tar.bz2",
+    url = "http://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2",
 )
 
 #new_local_repository(
