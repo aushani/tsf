@@ -1,0 +1,66 @@
+#new_local_repository(
+#    name = "eigen",
+#    path = "/usr/include/eigen3",
+#    build_file = "tools/eigen.BUILD"
+#)
+
+new_local_repository(
+    name = "cuda",
+    build_file = "tools/cuda.BUILD",
+    path = "/usr/local/cuda/"
+)
+
+new_local_repository(
+    name = "openscenegraph",
+    build_file = "tools/openscenegraph.BUILD",
+    path = "/usr/local/"
+)
+
+new_local_repository(
+    name = "qt4",
+    path = "/usr/include/qt4",
+    build_file = "tools/qt4.BUILD"
+)
+
+new_http_archive(
+    name = "boost",
+    build_file = "tools/boost.BUILD",
+    sha256 = "5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9",
+    type = "tar.bz2",
+    url = "https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.bz2",
+)
+
+# Latest Eigen, 3.3.4
+new_http_archive(
+    name = "eigen",
+    build_file = "tools/eigen.BUILD",
+    sha256 = "dd254beb0bafc695d0f62ae1a222ff85b52dbaa3a16f76e781dce22d0d20a4a6",
+    #sha256 = "fb8eae600b008bcd2297c710d21248b5dc44868224ccd5bd9677a8d770ba19f4",
+    type = "tar.bz2",
+    url = "https://robots.engin.umich.edu/~aushani/eigen-eigen-5a0156e40feb.tar.bz2",
+    #url = "https://robots.engin.umich.edu/~aushani/eigen-eigen-aushani.tar.bz2",
+)
+
+#new_local_repository(
+#    name = "eigen",
+#    path = "/home/aushani/thirdparty/",
+#    build_file = "tools/eigen.BUILD"
+#)
+
+new_local_repository(
+    name = "ceres",
+    path = "/usr/local/",
+    build_file = "tools/ceres.BUILD",
+)
+
+new_local_repository(
+    name = "glog",
+    path = "/usr/local/",
+    build_file = "tools/glog.BUILD",
+)
+
+new_local_repository(
+    name = "suitesparse",
+    path = "/usr/",
+    build_file = "tools/suitesparse.BUILD",
+)
