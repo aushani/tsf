@@ -17,7 +17,7 @@
 #include "gpu_occ_grid_builder.h"
 
 #include "util.h"
-#include "gpu_util.cu.h"
+#include "library/gpu_util/gpu_util.cu.h"
 
 gpu_occ_grid_builder_t*
 gpu_occ_grid_builder_create(int max_hits, int threads_per_block,

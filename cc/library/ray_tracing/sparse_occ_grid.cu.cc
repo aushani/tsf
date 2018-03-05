@@ -9,7 +9,7 @@
 
 #include "util.h"
 
-#include "gpu_util.cu.h"
+#include "library/gpu_util/gpu_util.cu.h"
 
 #include <thrust/device_vector.h>
 #include <thrust/reduce.h>

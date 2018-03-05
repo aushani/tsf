@@ -1,5 +1,5 @@
 #include "gpu_util.cu.h"
-#include "util.h"
+#include "library/util/util.h"
 #include <sys/time.h>
 
 int64_t utime_now() {
