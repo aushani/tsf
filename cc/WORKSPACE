@@ -1,8 +1,8 @@
-#new_local_repository(
-#    name = "cuda",
-#    build_file = "tools/cuda.BUILD",
-#    path = "/usr/local/cuda/"
-#)
+new_local_repository(
+    name = "cuda",
+    build_file = "tools/cuda.BUILD",
+    path = "/usr/local/cuda/"
+)
 
 #new_local_repository(
 #    name = "openscenegraph",
