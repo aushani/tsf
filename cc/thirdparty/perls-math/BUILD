@@ -1,5 +1,6 @@
 cc_library(
     name = "perls-math",
-    srcs = glob(["*.cpp", "*.h"]),
+    srcs = glob(["*.c", "*.h"]),
     visibility = ["//visibility:public"],
+    linkopts = [ '-lm' ],
 )

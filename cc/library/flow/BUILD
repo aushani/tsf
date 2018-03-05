@@ -13,11 +13,13 @@ cc_library(
 
 cc_library(
     name = "flow",
-    srcs = glob(['*.c'], exclude=["*.cu.cc"]),
-    hdrs = glob(["*.h"], exclude=["*.cu.h"]),
+    srcs = glob(['*.c', '*.cpp'], exclude=["*.cu.cc"]),
+    hdrs = glob(["*.h", '*.hpp'], exclude=["*.cu.h"]),
     visibility = ["//visibility:public"],
     linkopts = ["-lpthread"],
     deps = [
             ":flow_cuda",
+            "//library/kitti",
+            "//library/scan_matching",
            ],
 )

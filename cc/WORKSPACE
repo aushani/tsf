@@ -4,17 +4,17 @@ new_local_repository(
     path = "/usr/local/cuda/"
 )
 
-#new_local_repository(
-#    name = "openscenegraph",
-#    build_file = "tools/openscenegraph.BUILD",
-#    path = "/usr/local/"
-#)
+new_local_repository(
+    name = "openscenegraph",
+    build_file = "tools/openscenegraph.BUILD",
+    path = "/usr/local/"
+)
 
-#new_local_repository(
-#    name = "qt4",
-#    path = "/usr/include/qt4",
-#    build_file = "tools/qt4.BUILD"
-#)
+new_local_repository(
+    name = "qt4",
+    path = "/usr/include/qt4",
+    build_file = "tools/qt4.BUILD"
+)
 
 new_local_repository(
     name = "glib2",
