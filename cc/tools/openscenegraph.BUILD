@@ -1,6 +1,6 @@
 cc_library(
     name = "openscenegraph",
-    srcs = glob(["lib64/libosg*.so"]),
+    srcs = glob(["lib64/libosg*"]),
     hdrs = glob(["include/**"]),
     visibility = ["//visibility:public"],
     deps = [

@@ -54,10 +54,8 @@ case "$response" in
           -D CMAKE_CXX_FLAGS="-fPIC" \
           -D CMAKE_INSTALL_PREFIX="local_install" \
           -D BUILD_OSG_APPLICATIONS="OFF" \
+          -D FFMPEG_LIBAVCODEC_INCLUDE_DIRS="" \
           ../
-          #-D BUILD_OSG_DEPRECATED_SERIALIZE="OFF" \
-          #-D BUILD_OSG_PLUGINS="ON" \
-          #-D BUILD_OSG_PLUGINS_BY_DEFAULT="ON" \
 
     make -j $(nproc)
     make install
