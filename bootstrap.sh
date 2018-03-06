@@ -44,6 +44,9 @@ read -r -p "Build OpenSceneGraph [y/N] " response
 case "$response" in
   [yY][eY][eS]|[yY])
     echo Building OpenSceneGraph
+
+    git submodule update --init --recursive
+
     cd OpenSceneGraph
     mkdir build -p
     cd build
