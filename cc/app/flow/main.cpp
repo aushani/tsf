@@ -27,6 +27,8 @@
 
 #include "library/flow/state_filter.hpp"
 
+#include "library/gpu_util/gpu_util.h"
+
 std::vector<velodyne_returns_t*>
 load_all_velodyne(std::string kitti_log_dir, std::string kitti_log_date, int log_num)
 {
@@ -166,11 +168,10 @@ int main(int argc, char** argv)
         return EXIT_SUCCESS;
     }
 
-    std::string device_num = "0";
-    if (args.read("--device", device_num)) {
-      int dn = std::stoi(device_num, nullptr);
-      set_device(dn);
-      printf("Set device to %d\n", dn);
+    int device_num = 0;
+    if (args.read(std::string("--device"), device_num)) {
+      set_device(device_num);
+      printf("Set device to %d\n", device_num);
     }
 
     if (args.read(std::string("--test-ekf-flow"))) {

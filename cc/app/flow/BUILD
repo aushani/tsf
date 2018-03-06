@@ -40,6 +40,7 @@ cc_binary(
             "//library/kitti",
             "//library/flow",
             "//library/util",
+            "//library/gpu_util",
             "//app/flow/nodes",
             "//thirdparty/perls-common",
             "@openscenegraph//:openscenegraph",

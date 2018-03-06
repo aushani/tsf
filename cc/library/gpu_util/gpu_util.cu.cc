@@ -1,5 +1,7 @@
 #include "gpu_util.cu.h"
+#include "gpu_util.h"
 #include "library/util/util.h"
+
 #include <sys/time.h>
 
 #include <boost/assert.hpp>
