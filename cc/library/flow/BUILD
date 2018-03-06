@@ -22,6 +22,8 @@ cc_library(
             ":flow_cuda",
             "//library/kitti",
             "//library/scan_matching",
+            "//thirdparty/perls-math",
+            "//thirdparty/perls-common",
             "@openscenegraph//:openscenegraph",
            ],
 )

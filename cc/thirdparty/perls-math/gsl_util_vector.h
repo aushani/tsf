@@ -22,10 +22,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * Macro for creating a gsl_vector_view object and data on the stack.
  * Use gslu macros to create vector elements on the stack with vector
@@ -543,9 +539,6 @@ gslu_vector_abs_alloc (gsl_vector *a)
 
     return b;
 }
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

@@ -11,10 +11,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** find median, note input vector is sorted in place. */
 double
 gslu_stats_median_array (double data[], size_t stride, size_t n);
@@ -27,10 +23,6 @@ gslu_stats_median_vector (const gsl_vector *v);
  * the N-dimensional random vector */
 gsl_matrix *
 gslu_sample_cov (const gsl_matrix *A);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

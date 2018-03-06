@@ -14,10 +14,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 
 /**
  * @param lcm     LCM object.
@@ -159,10 +155,6 @@ lcmu_fread (const char *filename, void **out, int size, lcmu_decode f_decode, in
     if (!buf)                                                           \
         perror ("malloc()");                                            \
     lcm_type ## _encode (buf, 0, len, msg)
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

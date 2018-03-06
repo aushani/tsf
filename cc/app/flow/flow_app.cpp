@@ -1,7 +1,7 @@
-#include "perls-common/timestamp.h"
-#include "perls-common/timeutil.h"
-#include "perls-math/so3.h"
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-common/timestamp.h"
+#include "thirdparty/perls-common/timeutil.h"
+#include "thirdparty/perls-math/so3.h"
+#include "thirdparty/perls-math/ssc.h"
 
 #include "app/flow/flow_app.hpp"
 

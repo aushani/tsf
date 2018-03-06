@@ -6,7 +6,7 @@
 
 #include "flow_image_node.hpp"
 
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/ssc.h"
 
 namespace osg
 {

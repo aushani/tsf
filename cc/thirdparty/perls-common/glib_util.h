@@ -3,10 +3,6 @@
 
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 guint
 gu_int64_hash (gconstpointer v);
 
@@ -20,9 +16,5 @@ gu_int64_equal (gconstpointer v1, gconstpointer v2);
  */
 gpointer
 gu_dup (gconstpointer v, size_t size);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_GLIB_UTIL_H__

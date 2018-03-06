@@ -18,10 +18,6 @@
 #include <math.h>
 #include <float.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * compare two float variables
  * @return 0 if same, 1 if f1 is larger, -1 if f2 is larger
@@ -69,9 +65,5 @@ dbllcmp (long double d1, long double d2)
     else
         return  0;
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_MATH_COMPARE_H__

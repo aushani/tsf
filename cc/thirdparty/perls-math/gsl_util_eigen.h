@@ -16,10 +16,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** Eigen value decomposition structure */
 typedef struct _gslu_eigen gslu_eigen;
 struct _gslu_eigen {
@@ -43,10 +39,6 @@ gslu_eigen_free (gslu_eigen *eigen)
  */
 gslu_eigen *
 gslu_eigen_decomp_alloc (const gsl_matrix *A);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

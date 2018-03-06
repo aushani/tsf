@@ -12,10 +12,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * @param buf    Empty buffer.
  * @param format sprintf() format.
@@ -128,10 +124,6 @@ nmea_argi (const char *buf, int n, int *v);
  */
 int
 nmea_argf (const char *buf, int n, double *v);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

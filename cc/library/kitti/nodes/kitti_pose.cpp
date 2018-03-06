@@ -3,8 +3,8 @@
 
 #include <osg/ShapeDrawable>
 
-#include "perls-math/ssc.h"
-#include "perls-math/so3.h"
+#include "thirdparty/perls-math/ssc.h"
+#include "thirdparty/perls-math/so3.h"
 
 // local headers
 #include "library/viewer/util/utils.hpp"

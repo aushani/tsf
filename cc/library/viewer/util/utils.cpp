@@ -13,7 +13,7 @@
 #include <osg/ArgumentParser>
 
 // perls
-#include "perls-math/so3.h"
+#include "thirdparty/perls-math/so3.h"
 
 // local
 #include "utils.hpp"

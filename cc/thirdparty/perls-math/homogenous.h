@@ -3,10 +3,6 @@
 
 #include <gsl/gsl_matrix.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 // Maps [D x N] src to [(D+1) x N] dst where N is the number of points
 // and D is the dimension of each point
 void
@@ -22,9 +18,5 @@ dehomogenize (const gsl_matrix *src, gsl_matrix *dst);
 
 gsl_matrix *
 dehomogenize_alloc (const gsl_matrix *src);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_MATH_HOMOGENOUS_H__

@@ -10,10 +10,6 @@
 #define stdiou_printf_bold(...)  \
     printf ("%c[1m", ASCII_ESC), printf (__VA_ARGS__), printf ("%c[0m", ASCII_ESC)
 
-#ifdef __cplusplus
-extern "C" {
-#endif    
-
 /* prints buf as a hexadecimal stream in big-endian order 
  * 
  * if prefix is NULL, the default '0x' is used
@@ -41,9 +37,5 @@ int
 stdiou_sbindump (char *str, const void *buf, size_t len, const char *prefix);
 int
 stdiou_fbindump (FILE *stream, const void *buf, size_t len, const char *prefix);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_STDIO_UTIL_H__

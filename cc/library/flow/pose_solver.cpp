@@ -1,4 +1,4 @@
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/ssc.h"
 
 #include "pose_solver.hpp"
 

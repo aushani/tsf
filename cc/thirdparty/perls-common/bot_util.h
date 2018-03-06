@@ -23,10 +23,6 @@
 #define BOTU_PARAM_LONG_OPT_USE_SERVER "use-pserver"
 #define BOTU_PARAM_LONG_OPT_MASTER_CFG "master-cfg"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 
 /**
  * @param param   The configuration
@@ -111,10 +107,6 @@ botu_param_add_pserver_to_getopt (getopt_t *gopt);
  */
 BotParam *
 botu_param_new_from_getopt_or_fail (getopt_t *gopt, lcm_t *lcm);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

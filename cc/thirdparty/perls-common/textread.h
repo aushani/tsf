@@ -23,10 +23,6 @@
 
 #define TEXTREAD_MAX_NFIELDS 100000
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct _textread textread_t;
 struct _textread {
     char *csvlog_prefix;
@@ -43,7 +39,7 @@ struct _textread {
     char **lvalue;
     char **rvalue;
 
-    bool mutable;
+    bool my_mutable;
 };
 
 /**
@@ -65,7 +61,7 @@ textread_format (const char *format);
  */
 #define TEXTREAD_ADD_FIELD(tr, name, format, data)                      \
     {                                                                   \
-        if (tr->mutable) {                                              \
+        if (tr->my_mutable) {                                              \
             if (tr->nfields < TEXTREAD_MAX_NFIELDS) {                   \
                 tr->lvalue[tr->nfields] = strdup (name);                \
                 tr->rvalue[tr->nfields] = textread_format (format);     \
@@ -89,7 +85,7 @@ textread_format (const char *format);
  */
 #define TEXTREAD_ADD_STRFIELD(tr, name, format, str)                    \
     {                                                                   \
-        if (tr->mutable) {                                              \
+        if (tr->my_mutable) {                                              \
             if (tr->nfields < TEXTREAD_MAX_NFIELDS) {                   \
                 tr->lvalue[tr->nfields] = strdup (name);                \
                 tr->rvalue[tr->nfields] = textread_format (format);     \
@@ -112,7 +108,7 @@ textread_format (const char *format);
  */
 #define TEXTREAD_ADD_CONST(tr, name, value)                             \
     {                                                                   \
-        if (tr->mutable) {                                              \
+        if (tr->my_mutable) {                                              \
             typeof(value) _v = value - (int64_t) value;                 \
             if (_v<0 || _v>0)   /* floating point */                    \
                 g_string_append_printf (tr->const_string, "nav_t.%s.const.%s=%.10f;\n", tr->srcid, name, (double) value); \
@@ -162,11 +158,6 @@ textread_stop (textread_t *tr);
  */
 void
 textread_gen_matlab (textread_t *tra[], size_t tra_len, const char *mfile_dir, const char *mfile_fname);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

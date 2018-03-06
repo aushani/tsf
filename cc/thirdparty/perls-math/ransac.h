@@ -1,10 +1,6 @@
 #ifndef __PERLS_MATH_RANSAC_H__
 #define __PERLS_MATH_RANSAC_H__
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*
   %ADAPT_TRIALS  Number of trials required to achieve an outlier-free sample set.
   %  N = ADAPT_TRIALS(n_inlier,n_total,p,s) calculates number of
@@ -24,9 +20,5 @@ extern "C" {
 */
 size_t
 ransac_adapt_trials (size_t n_inlier, size_t n_total, double p, size_t s);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_MATH_RANSAC_H__

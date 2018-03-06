@@ -3,10 +3,6 @@
 
 #include <time.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef int (*timeutil_timer_callback) (void *);
 
 typedef struct timeutil_timer timeutil_timer_t;
@@ -61,10 +57,5 @@ timeutil_sleep (int64_t sec)
  **/
 size_t
 timeutil_strftime (char *s, size_t max, const char *format, int64_t utime);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_TIMEUTIL_H__

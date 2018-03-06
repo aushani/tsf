@@ -12,10 +12,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** boolean is a wrapper for vector ulong */
 #define gslu_boolean gsl_vector_ushort
 /** boolean view */
@@ -188,10 +184,5 @@ gslu_boolean_printf (const gslu_boolean *i, const char *name);
  */
 void
 gslu_boolean_printfc (const gslu_boolean *i, const char *name, const char *fmt, CBLAS_TRANSPOSE_t trans);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_GSL_UTIL_BOOLEAN_H__

@@ -29,10 +29,6 @@
 #define GSD_IO_TCPIP      8
 #define GSD_IO_PLAYBACK  16
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define GSD_DATA_BUFSIZE 1024
 typedef struct _gsd_data_t gsd_data_t;
 struct _gsd_data_t {
@@ -142,10 +138,6 @@ void
 gsd_attach_destroy_callback (generic_sensor_driver_t *gsd,
                              void (*destroy_callback) (generic_sensor_driver_t *gsd, void *user),
                              void *destroy_callback_user);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

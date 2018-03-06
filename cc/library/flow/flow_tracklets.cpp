@@ -1,7 +1,7 @@
 #include "flow_tracklets.hpp"
 
-#include "perls-math/so3.h"
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/so3.h"
+#include "thirdparty/perls-math/ssc.h"
 
 #include <map>
 

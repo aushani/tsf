@@ -11,10 +11,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * custom "free" that checks for existence
  */
@@ -24,11 +20,6 @@ gslu_permutation_free (gsl_permutation *p)
     if (p)
         gsl_permutation_free (p);
 }
-
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

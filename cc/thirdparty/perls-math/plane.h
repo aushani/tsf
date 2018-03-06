@@ -6,11 +6,6 @@
 
 #include "gsl_util_index.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-
 /* finds the equation of the plane a*x + b*y + c*z + d = 0 given 3 points
  * xyz - 3 x N matrix of points, here N = 3
  * coeff - placeholder for plane coefficients [a,b,c,d]
@@ -47,9 +42,5 @@ void
 plane_ray_intersection (const gsl_vector *coeff,    /* 4x1 vector = [a b c d], ax+by+cz+d=0 */
                         const gsl_matrix *n_rays,   /* 3xN matrix, each column defines a ray = (v1,v2,v3) */
                         gsl_matrix *xyz);           /* 3xN matrix, each column defines the xyz ray intersection point */
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_PLANE_H__

@@ -12,12 +12,8 @@
 
 //#include <lcm/lcm-cpp.hpp>
 
-//#include "perls-math/gsl_util.h"
 #include "thirdparty/perls-math/so3.h"
-//#include "perls-math/ssc.h"
-#include "perls-common/timestamp.h"
-//#include "perls-common/timeutil.h"
-//#include "perls-common/units.h"
+#include "thirdparty/perls-common/timestamp.h"
 
 #include "scan_match_3d.h"
 

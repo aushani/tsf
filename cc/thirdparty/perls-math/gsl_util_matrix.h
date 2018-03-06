@@ -17,10 +17,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * Macro for creating a gsl_matrix_view object and data on the stack.
  * Use gslu macros to create matrix elements on the stack with matrix
@@ -382,10 +378,6 @@ gslu_matrix_skewsym_alloc (const gsl_vector *s)
     gslu_matrix_skewsym (S, s);
     return S;
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

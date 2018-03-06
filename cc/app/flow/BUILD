@@ -43,6 +43,7 @@ cc_binary(
             "//library/gpu_util",
             "//app/flow/nodes",
             "//thirdparty/perls-common",
+            "//thirdparty/perls-math",
             "@openscenegraph//:openscenegraph",
             "@eigen//:eigen",
             ],

@@ -11,17 +11,9 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** wrap circular quantities between [-pi,pi]*/
 double
 gslu_math_minimized_angle (double angle);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

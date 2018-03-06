@@ -15,11 +15,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-
 /*===============================BLAS======================================*/
 
 /**
@@ -748,11 +743,6 @@ gslu_blas_mHmHmH_complex_alloc (const gsl_matrix_complex *A, const gsl_matrix_co
     gslu_blas_mHmHmH_complex (D, A, B, C, _work);
     return D;
 }
-
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}
