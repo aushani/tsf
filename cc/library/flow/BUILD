@@ -8,6 +8,7 @@ cc_library(
             "//tools:cuda",
             "//library/ray_tracing",
             "@eigen//:eigen",
+            "@openscenegraph//:openscenegraph",
            ],
 )
 
@@ -21,5 +22,6 @@ cc_library(
             ":flow_cuda",
             "//library/kitti",
             "//library/scan_matching",
+            "@openscenegraph//:openscenegraph",
            ],
 )
