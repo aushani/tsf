@@ -5,7 +5,7 @@
 
 #include "state_filter.hpp"
 
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/ssc.h"
 
 StateFilter::StateFilter()
 {

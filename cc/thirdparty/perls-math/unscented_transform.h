@@ -7,10 +7,6 @@
 #include <gsl/gsl_vector.h>
 #include <gsl/gsl_eigen.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct unscented_transform_opts_t {
     double alpha;
     double beta;
@@ -42,9 +38,5 @@ typedef gsl_vector* (*unscented_func_t) (const gsl_vector *x, void *user);
 int
 unscented_func_alloc (const unscented_func_t f, const unscented_transform_t *ut,
                       gsl_vector **muPrime, gsl_matrix **sigmaPrime, void *user);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_MATH_UNSCENTED_TRANSFORM_H__

@@ -49,10 +49,6 @@
  *   i.e.  a_ij = A[i*stride + j]
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*=======================================================
  * composition functions
  * Set J_minus, J_plus, J_tail = NULL to not compute Jacobian.
@@ -287,9 +283,5 @@ int
 ssc_jacobian_camera_aerph (double H[5*12],
                            const double x_lvj[6], const double x_lvi[6],
                            const double x_vjc[6], const double x_vic[6]);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_SSC_H__

@@ -4,10 +4,6 @@
 #include <stdint.h>
 #include <stddef.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef void * (*CacheValueCopyFunc) (const void *value);
 
 typedef void (*CacheValueDestroyFunc) (void *value);
@@ -63,10 +59,5 @@ cache_push (cache_t *cache, int64_t key, void *value);
  */
 void *
 cache_pop (cache_t *cache, int64_t key);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_COMMON_CACHE_H__

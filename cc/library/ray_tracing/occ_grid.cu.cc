@@ -9,7 +9,7 @@
 #include "occ_grid.h"
 #include "util.h"
 
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/ssc.h"
 
 #include <thrust/reduce.h>
 #include <thrust/merge.h>

@@ -3,10 +3,6 @@
 
 #include <string.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** make and bind a udp socket to an ephemeral port. Returns the fd. **/
 int
 udp_socket_create (void);
@@ -29,9 +25,5 @@ udp_send_string (const char *ipaddr, int port, const char *string)
 {
     return udp_send (ipaddr, port, string, strlen (string));
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif //__PERLS_COMMON_UDP_H__

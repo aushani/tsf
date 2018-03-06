@@ -1,5 +1,4 @@
 // Adapted from perls/src/segway/slam/velodyne.c
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -14,7 +13,7 @@
 #include <math.h>
 #include <assert.h>
 
-//#include "perls-math/fasttrig.h"
+#include "thirdparty/perls-math/fasttrig.h"
 
 #include "velodyne.h"
 

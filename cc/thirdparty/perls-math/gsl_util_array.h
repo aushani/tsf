@@ -11,10 +11,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * prints a double array as a size1 by size2 gsl_matrix \n
  * e.g., gslu_array_printf (data, 2, 3, "A"); prints data as 2x3 matrix
@@ -32,10 +28,6 @@ gslu_array_printf (const double data[], size_t size1, size_t size2, const char *
 void
 gslu_array_printfc (const double data[], size_t size1, size_t size2, const char *name, 
                     const char *fmt, CBLAS_TRANSPOSE_t trans);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

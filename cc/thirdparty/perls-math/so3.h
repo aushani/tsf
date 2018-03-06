@@ -8,10 +8,6 @@
 
 #include "fasttrig.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*
 % ROTX  Compute a rotation matrix about the X-axis.
 %   R = ROTX(PHI) returns [3x3] rotation matrix R.  Note: PHI
@@ -479,9 +475,5 @@ so3_body2euler_gsl (const gsl_vector *pqr, const gsl_vector *rph,
     so3_body2euler (pqr->data, rph->data, rph_dot->data, J->data);
 
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_SO3_H__

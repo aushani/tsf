@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include <Eigen/Core>
-#include "perls-math/ssc.h"
+#include "thirdparty/perls-math/ssc.h"
 
 #include <cstdlib>
 

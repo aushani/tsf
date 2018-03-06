@@ -14,10 +14,6 @@
 
 #define MESH_QHULL_DELAUNAY_FLAGS "qhull d Qt Qbb Qc"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * triangular-based mesh.  Each triangle has three vertices: va, vb, and vc 
  */
@@ -112,9 +108,5 @@ mesh_save_to_obj (const gsl_matrix *points, const trimesh_t *tri, const char *fi
  */
 int
 mesh_load_from_obj_alloc (gsl_matrix **points, trimesh_t **tri, const char *filename);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* __PERLS_MATH_MESH_H__ */

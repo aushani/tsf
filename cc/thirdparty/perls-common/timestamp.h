@@ -7,10 +7,6 @@
 #include <time.h>
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct timestamp_sync_state timestamp_sync_state_t;
 struct timestamp_sync_state {
     double  dev_ticks_per_second; // how fast does device clock count? (nominal)
@@ -67,10 +63,5 @@ timestamp_sync_free (timestamp_sync_state_t *s);
 int64_t
 timestamp_sync (timestamp_sync_state_t * s, int64_t dev_ticks, int64_t host_utime);
 
-
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_TIMESTAMP_H__

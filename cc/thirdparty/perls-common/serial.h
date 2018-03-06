@@ -5,10 +5,6 @@
 #include <termios.h>
 #include <unistd.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef enum {PARITY_8N1=0, PARITY_7E1, PARITY_7O1, PARITY_7S1} parity_t;
 
 /* Creates a basic fd, defaulting to 9600 N81, raw data i/o, blocking, 
@@ -113,9 +109,5 @@ serial_set_ctsrts (int fd, bool on);
 */
 int 
 serial_set_echo (int fd, bool on);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_SERIAL_H__

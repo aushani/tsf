@@ -12,10 +12,6 @@
 #include <gsl/gsl_matrix.h>
 #include <gsl/gsl_vector.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** 
  * translation vector to direction-magnitude.
  * function from matlab van code (TRANS2DM)
@@ -87,10 +83,6 @@ dm_dm2trans_cmath (const double b[3], double t[3], double J[9]);
 void
 dm_trans2dm_pose_cov (const gsl_vector *x, const gsl_matrix *cov, 
                       gsl_vector *dmx, gsl_matrix *dmcov, gsl_matrix *J);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_DM_H__
 

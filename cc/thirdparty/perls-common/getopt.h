@@ -13,10 +13,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct getopt_option getopt_option_t;
 struct getopt_option
 {
@@ -266,10 +262,6 @@ getopt_get_string (getopt_t *gopt, const char *lname);
 
 int
 getopt_has_flag (getopt_t *gopt, const char *lname);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

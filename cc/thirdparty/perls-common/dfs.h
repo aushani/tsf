@@ -6,10 +6,6 @@
 #define DFS_GRAVITY        (9.81)     // m/s^2
 #define DFS_P_ATM_NOMINAL  (101325.0) // 101325 Pa = 1 atm
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /* returns water density rho based upon measured temperature and salinity
  * temperature - Celsius
  * salinity - ppt (0-freshwater, ~35-saltwater)
@@ -27,9 +23,5 @@ dfs_rho (double temperature, double salinity);
  */
 double
 dfs_simple (double rho, double p_gage);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_DFS_H__

@@ -3,10 +3,6 @@
 
 #include <sys/types.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif    
-
 /* Function with behaviour like `mkdir -p'
  * e.g., mode = 0775 
  * returns 0 success; -1 error 
@@ -37,9 +33,5 @@ unix_lsdir (const char *dirname, char ***listing, size_t *n);
  */
 int
 unix_touch (const char *path, mode_t mode);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_COMMON_UNIX_H__

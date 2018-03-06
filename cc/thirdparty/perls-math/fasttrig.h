@@ -22,10 +22,6 @@
         fasttrig_init ();                                               \
     }
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * call fasttrig_init () once within your main program to initialize fasttrig
  * library functions before use
@@ -99,10 +95,6 @@ _fatan (const double y, FASTTRIG_ARGS_DEF)
     return _fatan2 (y, 1, parent_func, parent_file, parent_line);
 }
 #define fatan(y) _fatan (y, FASTTRIG_ARGS)
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

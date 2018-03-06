@@ -148,10 +148,8 @@ timestamp_sync (timestamp_sync_state_t *s, int64_t dev_ticks,
         s->dev_ticks_since_sync = 0;
         dev_utime = host_utime;
     }
-#if 0
-    printf ("%"PRId64"  %"PRId64"  %+6"PRId64"  %8"PRId64"  %"PRId64"\n", 
-            host_utime, dev_utime, time_err, dticks, dev_ticks);
-#endif
+    //printf ("%"PRId64"  %"PRId64"  %+6"PRId64"  %8"PRId64"  %"PRId64"\n", 
+    //        host_utime, dev_utime, time_err, dticks, dev_ticks);
 
     return dev_utime;
 }

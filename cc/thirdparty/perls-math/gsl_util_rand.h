@@ -16,10 +16,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*===========================RANDOM NUMBER GENERATOR=========================*/
 /** random number generator */
 int32_t
@@ -136,10 +132,6 @@ gslu_rand_gaussian_vector (const gsl_rng *r, gsl_vector *a,
 void 
 gslu_rand_gaussian_matrix (const gsl_rng *r, gsl_matrix *A, 
                            const gsl_vector *mu, const gsl_matrix *Sigma, const gsl_matrix *L);
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}

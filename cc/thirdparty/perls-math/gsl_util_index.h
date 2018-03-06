@@ -12,10 +12,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /** index is a wrapper for vector ulong */
 #define gslu_index gsl_vector_ulong
 /** index view */
@@ -188,10 +184,5 @@ gslu_index_printf (const gslu_index *i, const char *name);
  */
 void
 gslu_index_printfc (const gslu_index *i, const char *name, const char *fmt, CBLAS_TRANSPOSE_t trans);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __PERLS_MATH_GSL_UTIL_INDEX_H__

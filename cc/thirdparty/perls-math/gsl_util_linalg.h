@@ -19,10 +19,6 @@
  * @{
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*============================LINEAR ALGEBRA===============================*/
 
 /** LU decomposition structure */
@@ -176,10 +172,6 @@ gslu_linalg_sqrtm_alloc (const gsl_matrix *R)
     gslu_linalg_sqrtm (R, sqrtmR);
     return sqrtmR;
 }
-
-#ifdef __cplusplus
-}
-#endif
 
 /**
  * @}
