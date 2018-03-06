@@ -12,7 +12,7 @@ dataset, you will be given the option to download a smaller subset of it.
 After running bootstrap.sh, go to the cc directory, which is a bazel project. To
 build everything:
 
-$ bazel build //..
+$ bazel build //...
 
 After building, you can run with a command like:
 
