@@ -1,4 +1,5 @@
-Run bootstrap.sh to install some dependencies:
+Run bootstrap.sh to install some dependencies (cuda assumed already installed
+from NVIDIA):
 
 * Bazel
 * Qt4
@@ -18,4 +19,4 @@ $ ./bazel-bin/app/flow/viewer
 
 This assumes that the data was put in $HOME/data/tsf_data. Otherwise:
 
-$ ./bazel-bin/app/flow/viewer --tsf_data_dir path/to/tsf_data
+$ ./bazel-bin/app/flow/viewer --tsf-data-dir path/to/tsf_data

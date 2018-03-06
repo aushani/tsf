@@ -228,7 +228,7 @@ int main(int argc, char** argv)
         printf("Using default KITTI calib dir: %s\n", calib_dir.c_str());
     }
 
-    std::string kitti_log_dir = tsf_data_dir + "kittidata/";
+    std::string kitti_log_dir = tsf_data_dir + "/kittidata/";
     printf("Loading KITTI Log Directory: %s...\n", kitti_log_dir.c_str());
 
     std::vector<Pose> raw_poses = Pose::load_all_poses(kitti_log_dir, kitti_log_date, log_num);
