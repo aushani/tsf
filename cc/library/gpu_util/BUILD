@@ -7,5 +7,6 @@ cc_library(
     deps = [
             "//tools:cuda",
             "//library/util",
+            "@boost//:boost_headers",
            ],
 )

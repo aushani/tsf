@@ -156,6 +156,7 @@ int main(int argc, char** argv)
     au->addCommandLineOption("--save-eval <dirname>", "Save evaluation to files", "");
     au->addCommandLineOption("--test-ekf-flow", "Test EKF for Flow", "");
     au->addCommandLineOption("--test-ekf-pose", "Test EKF for Pose", "");
+    au->addCommandLineOption("--device", "GPU device to run on", "0");
 
     // handle help text
     // call AFTER constructing viewer so keyboard shortcuts have been assigned
@@ -163,6 +164,13 @@ int main(int argc, char** argv)
     if ((helpType = args.readHelpType())) {
         au->write(std::cout, helpType);
         return EXIT_SUCCESS;
+    }
+
+    std::string device_num = "0";
+    if (args.read("--device", device_num)) {
+      int dn = std::stoi(device_num, nullptr);
+      set_device(dn);
+      printf("Set device to %d\n", dn);
     }
 
     if (args.read(std::string("--test-ekf-flow"))) {

@@ -2,6 +2,8 @@
 #include "library/util/util.h"
 #include <sys/time.h>
 
+#include <boost/assert.hpp>
+
 int64_t utime_now() {
     struct timeval tv;
     gettimeofday (&tv, NULL);
@@ -27,4 +29,11 @@ void get_gpu_mem(size_t *free_bytes, size_t *total_bytes) {
         exit(1);
 
     }
+}
+
+bool set_device(int device) {
+  cudaError_t err = cudaSetDevice(device);
+  BOOST_ASSERT(err == cudaSuccess);
+
+  return true;
 }
