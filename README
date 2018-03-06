@@ -6,7 +6,8 @@ from NVIDIA):
 * OpenSceneGraph (locally built)
 
 and get some data, which includes KITTI data in the needed directory structure,
-and other parameters and visualization tools.
+and other parameters and visualization tools. If you wish not to download the full
+dataset, you will be given the option to download a smaller subset of it.
 
 After running bootstrap.sh, go to the cc directory, which is a bazel project. To
 build everything:
