@@ -145,11 +145,11 @@ int main(int argc, char** argv)
     au->setCommandLineUsage(args.getApplicationName() + " [options]");
     au->setDescription(args.getApplicationName() +
                        " displays kitti sensor data.");
-    au->addCommandLineOption("--kitti-log-dir <dirname>", "KITTI data directory", "~/data/kittidata/extracted/");
+    au->addCommandLineOption("--tsf-data-dir <dirname>", "TSF data directory", "~/data/tsf_data/");
     au->addCommandLineOption("--kitti-log-date <dirname>", "KITTI date", "2011_09_26");
     au->addCommandLineOption("--log-num <num>", "KITTI log number", "18");
     //au->addCommandLineOption("--calib-dir <dirname>", "KITTI calib directory", "");
-    au->addCommandLineOption("--params-dir <dirname>", "Params directory", "~/data/icra2017/kitti_eval/bg-final/");
+    //au->addCommandLineOption("--params-dir <dirname>", "Params directory", "~/data/icra2017/kitti_eval/bg-final/");
     au->addCommandLineOption("--no-gui", "Run headless", "");
     au->addCommandLineOption("--save-tracklets <dirname>", "Save tracklets to files", "");
     au->addCommandLineOption("--save-matches <dirname>", "Save matches to files", "");
@@ -200,10 +200,10 @@ int main(int argc, char** argv)
 
     // Now load all relevant data
     std::string home_dir = getenv("HOME");
-    std::string kitti_log_dir = home_dir + "/data/kittidata/extracted/";
-    if (!args.read(std::string("--kitti-log-dir"), kitti_log_dir)) {
-        printf("Using default KITTI log dir: %s\n", kitti_log_dir.c_str());
-        //printf("Need KITTI data\n");
+    std::string tsf_data_dir = home_dir + "/data/tsf_data/";
+    if (!args.read(std::string("--tsf-data-dir"), tsf_data_dir)) {
+        printf("Using default TSF data dir: %s\n", tsf_data_dir.c_str());
+        //printf("Need TSF data\n");
         //exit(EXIT_FAILURE);
     }
 
@@ -221,18 +221,14 @@ int main(int argc, char** argv)
         //exit(EXIT_FAILURE);
     }
 
-    std::string params_dir = home_dir + "/data/icra2017/kitti_eval/bg-final/";
-    if (!args.read(std::string("--params-dir"), params_dir)) {
-        printf("Using default KITTI params dir: %s\n", params_dir.c_str());
-        //printf("Need Parameter data\n");
-        //exit(EXIT_FAILURE);
-    }
+    std::string params_dir = tsf_data_dir + "/bg_final/";
 
-    std::string calib_dir =  home_dir + "/data/kittidata/extracted/2011_09_26";
+    std::string calib_dir = tsf_data_dir + "/kittidata/" + kitti_log_date + "/";
     if (!args.read("--kitti-log-dir", calib_dir)) {
         printf("Using default KITTI calib dir: %s\n", calib_dir.c_str());
     }
 
+    std::string kitti_log_dir = tsf_data_dir + "kittidata/";
     printf("Loading KITTI Log Directory: %s...\n", kitti_log_dir.c_str());
 
     std::vector<Pose> raw_poses = Pose::load_all_poses(kitti_log_dir, kitti_log_date, log_num);

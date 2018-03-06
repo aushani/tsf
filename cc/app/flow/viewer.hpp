@@ -209,6 +209,8 @@ class FlowViewerWindow : public QMainWindow
     osg::OsgTracklets* _tracklets;
     osg::LayeredImage* _layered_image_1;
     osg::LayeredImage* _layered_image_2;
+
+    std::string _path;
 };
 
 // from osgpick example

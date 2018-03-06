@@ -405,6 +405,12 @@ FlowViewerWindow::FlowViewerWindow(osg::ArgumentParser& args,
     setWindowTitle(tr("KITTI Flow"));
     setMinimumSize(760, 1014);
 
+    std::string home_dir = getenv("HOME");
+    std::string tsf_data_dir = home_dir + "/data/tsf_data";
+    if (!args.read(std::string("--tsf-data-dir"), tsf_data_dir)) {
+      printf("Using default path: %s\n", tsf_data_dir.c_str());
+    }
+    _path = tsf_data_dir + "/osg_models/lexus/lexus_hs.obj";
     init(args.getApplicationUsage());
 
     // set up f_state
@@ -748,7 +754,7 @@ void FlowViewerWindow::init(osg::ApplicationUsage* au)
     osg::Matrixd D(osg::Quat(M_PI, osg::Vec3d(1, 0, 0)));
     D.postMultTranslate(osg::Vec3d(-1, 0, -1.2));
     xform_car->setMatrix(D);
-    xform_car->addChild(new osg::Car());
+    xform_car->addChild(new osg::Car(_path));
     xform->addChild(xform_car);
 
     // Setup kitti velodyne

@@ -52,6 +52,11 @@ LayeredImage::LayeredImage(int width, int height, double x0, double y0, double s
     ss_disp->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
     ss_disp->setRenderBinDetails(12, "RenderBin");
 
+    render_point_cloud(false);
+    render_depth_map(false);
+    render_flow(false);
+    render_roi(false);
+    render_roi_depth_mask(false);
 }
 
 LayeredImage::~LayeredImage()

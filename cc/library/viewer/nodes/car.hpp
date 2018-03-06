@@ -15,7 +15,7 @@ class Car : public osg::MatrixTransform
 {
   public:
 
-    Car();
+    Car(const std::string &path);
 
   private:
 

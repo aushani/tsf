@@ -20,18 +20,17 @@
 namespace osg
 {
 
-Car::Car() :
+Car::Car(const std::string &path) :
         osg::MatrixTransform()
 {
     const double k_d2r = UNITS_DEGREE_TO_RADIAN;
 
     // read car file into osg::Node ptr
-    osg::ref_ptr<osg::Node> car =
-            osgDB::readNodeFile(ViewerUtils::get_src_dir() + _k_car_file);
+    osg::ref_ptr<osg::Node> car = osgDB::readNodeFile(path);
 
     // TODO: throw an exception
     if (car == nullptr) {
-        std::cerr << "error reading car file" << std::endl;
+        std::cerr << "error reading car file: " << path << std::endl;
     } else {
 
       // scale and rotate car to +x, z down

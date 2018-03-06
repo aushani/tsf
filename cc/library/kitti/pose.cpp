@@ -47,7 +47,7 @@ Pose::read_oxt_file(FILE *fp)
                         &oxt.velmode,
                         &oxt.orimode);
 
-    if (res!=30) {
+    if (res!=30 && res!=26) {
         printf("Could not parse oxts file (only got %d)\n", res);
     }
 
