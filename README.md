@@ -11,7 +11,9 @@ cite the paper if this code is useful in your work.
 
 ## Getting Started
 
-If you have any questions, please contact aushani@gmail.com.
+If you have any questions, please contact aushani@gmail.com. Please note that
+the models here (background filter, occupancy constancy) are trained for the
+KITTI dataset.
 
 ### Dependencies
 
