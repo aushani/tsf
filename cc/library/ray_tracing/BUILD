@@ -3,13 +3,14 @@ cc_library(
     srcs = glob(['*.cu.cc']),
     hdrs = glob(["*.h"]),
     visibility = ["//visibility:public"],
-    copts = ["-x",  "cuda", "-std=c++11"],
+    copts = ["-x",  "cuda", "-std=c++11", "-arch=compute_61,code=sm_61", "-O3", "-DVERBOSE"],
     deps = [
             "//tools:cuda",
             "//library/sensors",
             "//library/gpu_util",
             "//library/util",
             "@eigen//:eigen",
+            "@boost//:boost_headers",
            ],
 )
 

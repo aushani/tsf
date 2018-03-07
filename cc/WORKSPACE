@@ -30,10 +30,9 @@ new_http_archive(
     url = "https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.bz2",
 )
 
-new_http_archive(
+new_git_repository(
     name = "eigen",
     build_file = "tools/eigen.BUILD",
-    sha256 = "dd254beb0bafc695d0f62ae1a222ff85b52dbaa3a16f76e781dce22d0d20a4a6",
-    type = "tar.bz2",
-    url = "http://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2",
+    remote = "https://github.com/eigenteam/eigen-git-mirror.git",
+    commit = "1ae2849542a7892089f81f2ee460b510cdb0a16d",
 )

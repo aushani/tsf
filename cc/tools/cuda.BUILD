@@ -8,9 +8,9 @@ cc_library(
     linkopts = [
         "-Wl,-rpath=/usr/local/cuda/lib64",
         "-L/usr/local/cuda/lib64",
-        "-lnppc",
-        "-lnppi",
-        "-lnpps",
+        #"-lnppc",
+        #"-lnppi",
+        #"-lnpps",
         "-lcufft",
         "-lcudart",
         "-lm",
