@@ -650,18 +650,19 @@ FlowApp::in_camera_view(double x, double y, double z)
 {
     if (_calib_loaded) {
 
-        Eigen::MatrixXd p_x(3, 1);
-        p_x(0) = x;
-        p_x(1) = y;
-        p_x(2) = 0; // ground
+        Eigen::Matrix<double, 4, 1> p_x;
+        p_x(0, 0) = x;
+        p_x(1, 0) = y;
+        p_x(2, 0) = 0; // ground
+        p_x(3, 0) = 1;
 
-        Eigen::MatrixXd p_c = _P_rect * _R_rect * _T_cv * p_x;
+        Eigen::Matrix<double, 3, 1> p_c = _P_rect * _R_rect * _T_cv * p_x;
 
-        if (p_c(2) < 0)
+        if (p_c(2, 0) < 0)
             return false;
 
-        double x_c = p_c(0) / p_c(2);
-        double y_c = p_c(1) / p_c(2);
+        double x_c = p_c(0, 0) / p_c(2, 0);
+        double y_c = p_c(1, 0) / p_c(2, 0);
 
         if (x_c < 0 || x_c > 1392)
             return false;
@@ -723,6 +724,9 @@ FlowApp::set_selected_position(double x, double y)
             printf("\tPos: %5.3f %5.3f, flow is: %5.3f %5.3f\n", x, y, f_x, f_y);
 
         }
+
+        bool in_view = in_camera_view(x, y, 0);
+        printf("In Camera View: %s\n", in_view ? "YES":"NO");
     }
 }
 
@@ -1085,7 +1089,6 @@ FlowApp::load_instrinsics(FILE *f_cc)
         }
     }
 
-    _R_rect = Eigen::MatrixXd(4, 4);
     _R_rect.setZero();
     for (int i=0; i<3; i++) {
         for (int j=0; j<3; j++)
@@ -1093,7 +1096,7 @@ FlowApp::load_instrinsics(FILE *f_cc)
     }
     _R_rect(3, 3) = 1.0;
 
-    _P_rect = Eigen::MatrixXd(3, 4);
+    _P_rect.setZero();
     for (int i=0; i<3; i++) {
         for (int j=0; j<4; j++) {
             _P_rect(i, j) = p[i*4 + j];
@@ -1115,7 +1118,6 @@ FlowApp::load_extrinsics(FILE *f_vc)
     //        R[0], R[1], R[2], R[3], R[4], R[5],
     //        R[6], R[7], R[8], t[0], t[1], t[2]);
 
-    _T_cv = Eigen::MatrixXd(4, 4);
     _T_cv.setZero();
     for (int i=0; i<3; i++) {
         for (int j=0; j<3; j++)

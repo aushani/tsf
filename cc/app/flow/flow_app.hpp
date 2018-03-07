@@ -117,9 +117,9 @@ class FlowApp
     image_roi_grid_t *_roi_grid_2 = NULL;
 
     bool _calib_loaded = false;
-    Eigen::MatrixXd _R_rect;
-    Eigen::MatrixXd _P_rect;
-    Eigen::MatrixXd _T_cv;
+    Eigen::Matrix<double, 4, 4> _R_rect;
+    Eigen::Matrix<double, 3, 4> _P_rect;
+    Eigen::Matrix<double, 4, 4> _T_cv;
 
     bool _forward = true;
     bool _use_filter = true;
