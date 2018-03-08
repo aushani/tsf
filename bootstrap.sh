@@ -77,7 +77,22 @@ case "$response" in
     cd $path
 
     echo Downloading data
-    wget http://robots.engin.umich.edu/~aushani/tsf_data.tar.gz
+
+    if wget http://robots.engin.umich.edu/~aushani/tsf_data.tar.gz
+    then
+      echo Got tarball
+    else
+      echo Couldn\'t connect to http://robots.engin.umich.edu/~aushani/tsf_data.tar.gz
+      echo Trying secondary address
+      if wget http://www.aushani.com/files/tsf_data.tar.gz
+      then
+        echo Got tarball
+      else
+        echo Couldn\'t connect to http://www.aushani.com/files/tsf_data.tar.gz
+        echo Please contact aushani@gmail.com for assistance
+        break
+      fi
+    fi
 
     tar xvpf tsf_data.tar.gz
 
@@ -93,7 +108,22 @@ case "$response" in
         cd $path
 
         echo Downloading data
-        wget http://robots.engin.umich.edu/~aushani/tsf_data_small.tar.gz
+
+        if wget http://robots.engin.umich.edu/~aushani/tsf_data_small.tar.gz
+        then
+          echo Got tarball
+        else
+          echo Couldn\'t connect to http://robots.engin.umich.edu/~aushani/tsf_data_small.tar.gz
+          echo Trying secondary address
+          if wget http://www.aushani.com/files/tsf_data_small.tar.gz
+          then
+            echo Got tarball
+          else
+            echo Couldn\'t connect to http://www.aushani.com/files/tsf_data_small.tar.gz
+            echo Please contact aushani@gmail.com for assistance
+            break
+          fi
+        fi
 
         tar xvpf tsf_data_small.tar.gz
 
