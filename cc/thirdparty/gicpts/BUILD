@@ -2,9 +2,10 @@ cc_library(
     name = "gicpts",
     srcs = glob(["*.cpp", "*.h"], exclude=["test_gicp.cpp", "scan2ascii.cpp"]),
     visibility = ["//visibility:public"],
-    linkopts = ["-lgsl -lgslcblas -lm"], # gsl
+    linkopts = [ "-lm" ],
     deps = [
             "//thirdparty/ann",
+            "@gsl//:gsl",
            ]
 )
 
@@ -16,6 +17,7 @@ cc_binary(
             "//thirdparty/ann",
             "//thirdparty/gicpts:gicpts",
             "@boost//:boost_programoptions",
+            "@gsl//:gsl",
            ]
 )
 
@@ -27,5 +29,6 @@ cc_binary(
             "//thirdparty/ann",
             "//thirdparty/gicpts:gicpts",
             "@boost//:boost_programoptions",
+            "@gsl//:gsl",
            ]
 )

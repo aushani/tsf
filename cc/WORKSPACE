@@ -5,6 +5,12 @@ new_local_repository(
 )
 
 new_local_repository(
+    name = "gsl",
+    build_file = "tools/gsl.BUILD",
+    path = "/usr/",
+)
+
+new_local_repository(
     name = "openscenegraph",
     build_file = "tools/openscenegraph.BUILD",
     path = "../OpenSceneGraph/build/local_install/"
