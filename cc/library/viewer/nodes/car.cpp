@@ -10,7 +10,7 @@
 #include <osgDB/ReadFile>
 
 // perls
-#include <perls-common/units.h>
+#include "thirdparty/perls-common/units.h"
 
 // local headers
 #include "library/viewer/util/utils.hpp"

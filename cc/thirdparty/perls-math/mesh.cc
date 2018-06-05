@@ -1,7 +1,7 @@
 #include "mesh.h"
 #include "gsl_util_matrix.h"
 
-#include "perls-common/error.h"
+#include "thirdparty/perls-common/error.h"
 #include <assert.h>
 
 #include <qhull/qhull_a.h>

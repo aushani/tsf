@@ -4,7 +4,8 @@ cc_library(
     srcs = [
             "timestamp.h", "timestamp.cc",
             "timeutil.h", "timeutil.cc",
-            "error.h"
+            "error.h",
+            "units.h"
            ],
     visibility = ["//visibility:public"],
     copts = ["-fpermissive"],

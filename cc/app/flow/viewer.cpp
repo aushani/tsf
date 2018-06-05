@@ -19,7 +19,7 @@
 //#include <QMenuBar>
 
 // perls
-#include "perls-common/units.h"
+#include "thirdparty/perls-common/units.h"
 
 // local
 #include "library/viewer/util/utils.hpp"

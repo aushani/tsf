@@ -10,7 +10,7 @@
  */
 
 #include "gsl/gsl_matrix.h"
-#include "perls-math/gsl_util_index.h"
+#include "thirdparty/perls-math/gsl_util_index.h"
 
 #define MESH_QHULL_DELAUNAY_FLAGS "qhull d Qt Qbb Qc"
 

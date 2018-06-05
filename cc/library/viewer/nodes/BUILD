@@ -6,6 +6,7 @@ cc_library(
     deps = [
             "//library/viewer/util",
             "//library/sensors",
+            "//thirdparty/perls-common",
             "@openscenegraph//:openscenegraph",
             "@eigen//:eigen",
             ],

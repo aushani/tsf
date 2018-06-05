@@ -10,5 +10,6 @@ cc_library(
             "//library/viewer/nodes",
             "//library/viewer/util",
             "//thirdparty/perls-math",
+            "//thirdparty/perls-common",
             ],
 )

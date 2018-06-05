@@ -23,6 +23,7 @@ qt4_cc_library(
             "//library/kitti",
             "//library/flow",
             "//app/flow/nodes",
+            "//thirdparty/perls-common",
            ],
 )
 

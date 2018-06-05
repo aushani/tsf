@@ -4,6 +4,7 @@ cc_library(
     visibility = ["//visibility:public"],
     linkopts = [ "-lm" ],
     deps = [
+            "//thirdparty/perls-common",
             "@gsl//:gsl",
            ],
     copts = ["-fpermissive"],
