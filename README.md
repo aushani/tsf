@@ -31,9 +31,11 @@ $ ./bootstrap.sh
 
 You will be prompted for:
 
-* Bazel
+* Bazel 0.4.5
 
-  Build system to compile the project
+  Build system to compile the project. The project was originally built with
+  bazel 0.4.5, and I have received reports of failures when compiling when more
+  recent versions of bazel.
 
 * Qt4
 

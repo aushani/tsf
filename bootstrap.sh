@@ -6,18 +6,16 @@ echo Please install cuda on your own from the NVIDIA website
 echo
 
 # Install bazel #######################
-read -r -p "Install Bazel [y/N] " response
+read -r -p "Install Bazel 0.4.5 [y/N] " response
 case "$response" in
   [yY][eY][eS]|[yY])
-    echo installing bazel
+    echo Installing bazel
 
-    sudo apt-get install openjdk-8-jdk
+    wget https://github.com/bazelbuild/bazel/releases/download/0.4.5/bazel-0.4.5-installer-linux-x86_64.sh
 
-    grep "14.04" /etc/issue > /dev/null && (sudo add-apt-repository ppa:webupd8team/javai && sudo apt-get update && sudo apt-get install oracle-java8-installer)
+    chmod +x bazel-0.4.5-installer-linux-x86_64.sh
+    sudo ./bazel-0.4.5-installer-linux-x86_64.sh
 
-    echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-    curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-    sudo apt-get update && sudo apt-get install bazel
     ;;
   *)
     echo Not Installing Bazel
